@@ -1,6 +1,6 @@
 [user]
-        name  = Valentin Brajon
-        email = vbrajon@gmail.com
+        name  = David Nowinsky
+        email = david@nowinsky.net
 [core]
         editor = vi
         excludesfile = ~/.gitexcludes
@@ -22,3 +22,6 @@
         lg  = log -M --decorate --graph --oneline
         br  = branch
         sth = stash
+[url "https://"]
+	insteadOf = git://
+
