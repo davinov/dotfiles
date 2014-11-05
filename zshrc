@@ -40,3 +40,6 @@ antigen apply
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+
+# added by travis gem
+[ -f /home/david/.travis/travis.sh ] && source /home/david/.travis/travis.sh
