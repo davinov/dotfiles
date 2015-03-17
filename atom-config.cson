@@ -1,0 +1,17 @@
+"*":
+  "exception-reporting":
+    userId: "d91963f3-a024-c2f7-7c30-b2430cf479e3"
+  welcome:
+    showOnStartup: false
+  core:
+    autoHideMenuBar: true
+  editor:
+    invisibles: {}
+    showInvisibles: true
+    showIndentGuide: true
+    fontFamily: "Source Code Pro"
+  "autoclose-html": {}
+  linter: {}
+  minimap:
+    plugins:
+      "git-diff": true
