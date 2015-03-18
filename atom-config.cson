@@ -5,11 +5,17 @@
     showOnStartup: false
   core:
     autoHideMenuBar: true
+    disabledPackages: [
+      "linter-pylint"
+      "vim-mode"
+    ]
   editor:
     invisibles: {}
     showInvisibles: true
     showIndentGuide: true
     fontFamily: "Source Code Pro"
+    softWrap: true
+    softWrapAtPreferredLineLength: true
   "autoclose-html": {}
   linter: {}
   minimap:
