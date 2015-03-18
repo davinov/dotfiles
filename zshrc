@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH 
+export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 source ~/.zsh/antigen.zsh
 source ~/.zsh/pure.zsh
