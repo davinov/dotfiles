@@ -16,8 +16,12 @@
     fontFamily: "Source Code Pro"
     softWrap: true
     softWrapAtPreferredLineLength: true
+    fontSize: 15
   "autoclose-html": {}
   linter: {}
   minimap:
     plugins:
       "git-diff": true
+  "atom-beautify":
+    _analyticsUserId: "9860ef15-964d-41cf-8369-7675ffedcaf5"
+  "tree-view": {}
