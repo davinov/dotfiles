@@ -8,6 +8,8 @@
     disabledPackages: [
       "linter-pylint"
       "vim-mode"
+      "tabs"
+      "tree-view"
     ]
   editor:
     invisibles: {}
@@ -15,7 +17,6 @@
     showIndentGuide: true
     fontFamily: "Source Code Pro"
     softWrap: true
-    softWrapAtPreferredLineLength: true
     fontSize: 15
   "autoclose-html": {}
   linter: {}
@@ -24,4 +25,10 @@
       "git-diff": true
   "atom-beautify":
     _analyticsUserId: "9860ef15-964d-41cf-8369-7675ffedcaf5"
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: false
+    hideIgnoredNames: false
+    showOnRightSide: false
+    sortFoldersBeforeFiles: true
+  tabs:
+    showIcons: true
