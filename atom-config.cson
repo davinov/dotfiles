@@ -24,6 +24,7 @@
       "git-diff": true
   "atom-beautify":
     _analyticsUserId: "9860ef15-964d-41cf-8369-7675ffedcaf5"
+    analytics: false
   tabs:
     showIcons: true
   "sublime-tabs": {}
