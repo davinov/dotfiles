@@ -1,4 +1,4 @@
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/dev/android/sdk/platform-tools:$HOME/dev/android/sdk/tools:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 source ~/.zsh/antigen.zsh
 source ~/.zsh/pure.zsh

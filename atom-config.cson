@@ -18,7 +18,9 @@
     softWrap: true
     fontSize: 15
   "autoclose-html": {}
-  linter: {}
+  linter:
+    lintOnChange: false
+    clearOnChange: true
   minimap:
     plugins:
       "git-diff": true
@@ -32,3 +34,11 @@
     neverCloseDirty: true
     neverCloseNew: true
     neverCloseUnsaved: true
+  wakatime:
+    ignore: [
+      "^/var/"
+      "^/tmp/"
+      "^/private/"
+    ]
+    apikey: "ebeea8e9-bf14-4483-9ab9-9c46bd257f42"
+  "linter-jshint": {}
