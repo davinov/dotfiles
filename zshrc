@@ -26,7 +26,6 @@ antigen bundle vundle
 antigen bundle sprunge
 antigen bundle fabric
 antigen bundle capistrano
-antigen bundle atom
 antigen bundle coffee
 antigen bundle docker
 antigen bundle github
