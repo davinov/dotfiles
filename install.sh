@@ -1,8 +1,17 @@
+#!/bin/sh
+
 cd ~
 
 echo "*** Install basic packages..."
 sudo apt-get install -y curl git build-essential python-dev python-pip vim
 sudo pip install virtualenvwrapper
+
+echo "*** Install MongoDB..."
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv EA312927
+MONGO_VERSION="3.0"
+echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo apt-get update -q
+sudo apt-get install -y mongodb-org
 
 echo "*** Install KVM..."
 sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
