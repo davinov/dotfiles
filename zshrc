@@ -1,4 +1,4 @@
-export PATH=$HOME/dev/android/sdk/platform-tools:$HOME/dev/android/sdk/tools:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/bin
 
 source ~/.zsh/antigen.zsh
 source ~/.zsh/pure.zsh
@@ -38,7 +38,4 @@ antigen apply
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-
-# added by travis gem
-[ -f /home/david/.travis/travis.sh ] && source /home/david/.travis/travis.sh
+export PATH=$PATH:$HOME/dev/sdk/android/platform-tools:$HOME/dev/sdk/android/tools # Android SDK

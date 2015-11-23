@@ -4,6 +4,12 @@ echo "*** Install basic packages..."
 sudo apt-get install -y curl git build-essential python-dev python-pip vim
 sudo pip install virtualenvwrapper
 
+echo "*** Install KVM..."
+sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+
+echo "*** Install adnroid required I386 libs..."
+sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1
+
 echo "*** Install dotfiles..."
 ln -sf .dotfiles/gitconfig .gitconfig
 ln -sf .dotfiles/gitexcludes .gitexcludes
