@@ -3,7 +3,7 @@
 cd ~
 
 echo "*** Install basic packages..."
-sudo apt-get install -y curl git build-essential python-dev python-pip vim
+sudo apt-get install -y curl git build-essential openssh-server python-dev python-pip vim
 sudo pip install virtualenvwrapper
 
 echo "*** Install MongoDB..."
@@ -16,7 +16,7 @@ sudo apt-get install -y mongodb-org
 echo "*** Install KVM..."
 sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 
-echo "*** Install adnroid required I386 libs..."
+echo "*** Install android required I386 libs..."
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1
 
 echo "*** Install dotfiles..."
@@ -39,3 +39,10 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 echo "*** Install tmux..."
 sudo apt-get install -y tmux
+
+echo "*** Install node.js..."
+curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+echo "*** Install basic npm packages..."
+sudo npm install -g bower gulp cordova ionic
