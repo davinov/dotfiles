@@ -46,3 +46,6 @@ sudo apt-get install -y nodejs
 
 echo "*** Install basic npm packages..."
 sudo npm install -g bower gulp cordova ionic
+
+echo "*** Configure Gnome..."
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
