@@ -3,8 +3,27 @@
 cd ~
 
 echo "*** Install basic packages..."
-sudo apt-get install -y curl git build-essential openssh-server python-dev python-pip vim
+sudo apt-get install -y curl git openssh-server vim
+
+echo "*** Install imaging programs..."
+sudo apt-get install -y gimp inkscape
+
+echo "*** Install dev libs and packages..."
+sudo apt-get install -y build-essential zlib1g-dev
+sudo apt-get install -y libsqlite3-dev libpq-dev
+
+echo "*** Install postgres..."
+sudo apt-get install -y postgresql
+
+echo "*** Install python packages..."
+sudo apt-get install -y python-dev python-pip
 sudo pip install virtualenvwrapper
+
+echo "*** Install Ansible..."
+sudo apt-get install -y software-properties-common
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y ansible
 
 echo "*** Install MongoDB..."
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv EA312927
@@ -39,6 +58,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 echo "*** Install tmux..."
 sudo apt-get install -y tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "*** Install node.js..."
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
@@ -46,6 +66,13 @@ sudo apt-get install -y nodejs
 
 echo "*** Install basic npm packages..."
 sudo npm install -g bower gulp cordova ionic
+
+echo "*** Install ruby packages..."
+sudo apt-get install -y ruby ruby-dev rubygems-integration
+sudo gem install bundler
+
+echo "*** Install virtualbox..."
+sudo apt-get install -y virtualbox
 
 echo "*** Configure Gnome..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
