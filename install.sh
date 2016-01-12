@@ -74,5 +74,14 @@ sudo gem install bundler
 echo "*** Install virtualbox..."
 sudo apt-get install -y virtualbox
 
+echo "*** Install lastpass-cli..."
+sudo apt-get install -y openssl libcurl3 libxml2 libssl-dev libxml2-dev libcurl4-openssl-dev pinentry-curses xclip
+mkdir -p ~/apps
+git clone git@github.com:lastpass/lastpass-cli.git ~/apps/lastpass
+cd ~/apps/lastpass
+make
+sudo make install
+cd ~
+
 echo "*** Configure Gnome..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
