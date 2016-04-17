@@ -2,8 +2,19 @@
 
 cd ~
 
+echo "*** Add repositories..."
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv EA312927
+MONGO_VERSION="3.2"
+echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo add-apt-repository -y ppa:webupd8team/java
+sudo add-apt-repository -y ppa:moka/stable
+
 echo "*** Install basic packages..."
-sudo apt-get install -y curl git openssh-server vim
+sudo apt-get install -y curl git openssh-server vim zsh
+sudo apt-get install -y software-properties-common
+
+echo "*** Set default shell to zsh..."
+chsh -s $(which zsh)
 
 echo "*** Install imaging programs..."
 sudo apt-get install -y gimp inkscape
@@ -16,20 +27,14 @@ echo "*** Install postgres..."
 sudo apt-get install -y postgresql
 
 echo "*** Install python packages..."
-sudo apt-get install -y python-dev python-pip
+sudo apt-get install -y python-dev python-pip python-setuptools
 sudo pip install virtualenvwrapper
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
 echo "*** Install Ansible..."
-sudo apt-get install -y software-properties-common
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install -y ansible
+sudo pip install ansible
 
 echo "*** Install MongoDB..."
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv EA312927
-MONGO_VERSION="3.0"
-echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
-sudo apt-get update -q
 sudo apt-get install -y mongodb-org
 
 echo "*** Install KVM..."
@@ -71,6 +76,9 @@ echo "*** Install ruby packages..."
 sudo apt-get install -y ruby ruby-dev rubygems-integration
 sudo gem install bundler
 
+echo "*** Install java..."
+sudo apt-get install oracle-java8-installer
+
 echo "*** Install virtualbox..."
 sudo apt-get install -y virtualbox
 
@@ -85,3 +93,7 @@ cd ~
 
 echo "*** Configure Gnome..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
+
+echo "*** Install icons..."
+sudo apt-get install moka-icon-theme
+

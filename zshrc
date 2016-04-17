@@ -39,3 +39,7 @@ antigen apply
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/dev/sdk/android/platform-tools:$HOME/dev/sdk/android/tools:$HOME/dev/sdk/android/build-tools/23.0.2 # Android SDK
+
+export PATH="/home/david/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
