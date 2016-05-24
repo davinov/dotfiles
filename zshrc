@@ -45,3 +45,5 @@ export PATH=$PATH:$HOME/dev/sdk/android/platform-tools:$HOME/dev/sdk/android/too
 export PATH="/home/david/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+eval $(ssh-agent)
