@@ -5,7 +5,7 @@ cd ~
 echo "*** Add repositories..."
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv EA312927
 MONGO_VERSION="3.2"
-echo "deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:moka/stable
 
@@ -66,11 +66,11 @@ sudo apt-get install -y tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "*** Install node.js..."
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "*** Install basic npm packages..."
-sudo npm install -g bower gulp cordova ionic
+sudo npm install -g bower gulp cordova ionic nvm
 
 echo "*** Install ruby packages..."
 sudo apt-get install -y ruby ruby-dev rubygems-integration
