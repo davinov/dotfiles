@@ -1,0 +1,19 @@
+Host *.toucantoco.com
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa_pro
+Host *.toucantoco.lan
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa_pro
+Host *.toucantoco.guru
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa_pro
+Host 192.168.10.*
+  ForwardAgent yes
+Host *.nowinsky.net
+  ForwardAgent yes
+Host prp-peopleanalytics.vinci.net
+  ProxyCommand ssh 'david.nowinsky@toucantoco.com'@vicadm.vinci.com -W %h:%p
+Host github-toucan
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa_pro

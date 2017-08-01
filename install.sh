@@ -49,6 +49,9 @@ ln -sf .dotfiles/gitexcludes .gitexcludes
 ln -sf .dotfiles/tmux.conf .tmux.conf
 ln -sf .dotfiles/zshrc .zshrc
 
+mdir -p .ssh
+ln -sf ../.dotfiles/sshconfig .ssh/config
+
 mkdir -p .zsh
 ln -sf ../.dotfiles/zsh/antigen.zsh .zsh/antigen.zsh
 ln -sf ../.dotfiles/zsh/pure.zsh .zsh/pure.zsh
