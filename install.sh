@@ -73,7 +73,7 @@ curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "*** Install basic npm packages..."
-sudo npm install -g bower gulp cordova ionic nvm
+sudo npm install -g bower gulp cordova ionic n
 
 echo "*** Install ruby packages..."
 sudo apt-get install -y ruby ruby-dev rubygems-integration
@@ -97,6 +97,6 @@ cd ~
 echo "*** Configure Gnome..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
 
-echo "*** Install icons..."
-sudo apt-get install moka-icon-theme
+echo "*** Install icons and fonts ..."
+sudo apt-get install -y moka-icon-theme ttf-ancient-fonts
 

@@ -1,6 +1,9 @@
 Host *.toucantoco.com
   ForwardAgent yes
   IdentityFile ~/.ssh/id_rsa_pro
+Host *.toucantoco.net
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa_pro
 Host *.toucantoco.lan
   ForwardAgent yes
   IdentityFile ~/.ssh/id_rsa_pro

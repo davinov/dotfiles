@@ -47,10 +47,6 @@ eval "$(pyenv virtualenv-init -)"
 
 eval $(ssh-agent)
 ssh-add
-
-export NVM_DIR="/home/david/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-alias node='unalias node ; unalias npm ; nvm use default ; node $@' # only on demand
-alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+# ssh-add ~/.ssh/id_rsa_pro
 
 # set +x
