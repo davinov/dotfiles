@@ -23,3 +23,5 @@
         br  = branch
         sth = stash
         bp  = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\""
+[diff "ansible-vault"]
+	textconv = ansible-vault view

@@ -1,13 +1,16 @@
 Host *.toucantoco.com
+  User toucan
   ForwardAgent yes
   IdentityFile ~/.ssh/id_rsa_pro
 Host *.toucantoco.net
+  User toucan
   ForwardAgent yes
   IdentityFile ~/.ssh/id_rsa_pro
 Host *.toucantoco.lan
   ForwardAgent yes
   IdentityFile ~/.ssh/id_rsa_pro
 Host *.toucantoco.guru
+  User toucan
   ForwardAgent yes
   IdentityFile ~/.ssh/id_rsa_pro
 Host 192.168.10.*

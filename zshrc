@@ -45,8 +45,8 @@ export PATH="/home/david/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-eval $(ssh-agent)
-ssh-add
+# eval $(ssh-agent)
+# ssh-add
 # ssh-add ~/.ssh/id_rsa_pro
 
 # set +x
