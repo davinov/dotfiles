@@ -39,15 +39,29 @@ sudo apt-get install -y mongodb-org
 
 echo "*** Install Redis..."
 sudo apt-get install -y redis-server
+sudo systemctl disable redis
 
 echo "*** Install nginx..."
 sudo apt-get install -y nginx
+sudo systemctl disable nginx
 
 echo "*** Install KVM..."
 sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 
 echo "*** Install android required I386 libs..."
 sudo apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1
+
+echo "*** Install utlimate vimrc..."
+sudo apt-get install -y ctags
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+echo "*** Install Oh My ZSH..."
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "*** Install tmux..."
+sudo apt-get install -y tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "*** Install dotfiles..."
 ln -sf .dotfiles/gitconfig .gitconfig
@@ -62,17 +76,6 @@ mkdir -p .zsh
 ln -sf ../.dotfiles/zsh/antigen.zsh .zsh/antigen.zsh
 ln -sf ../.dotfiles/zsh/pure.zsh .zsh/pure.zsh
 
-echo "*** Install utlimate vimrc..."
-sudo apt-get install -y ctags
-git clone https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-
-echo "*** Install Oh My ZSH..."
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-echo "*** Install tmux..."
-sudo apt-get install -y tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "*** Install node.js..."
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
@@ -103,6 +106,8 @@ cd ~
 echo "*** Configure Gnome..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
 
-echo "*** Install icons and fonts ..."
-sudo apt-get install -y moka-icon-theme ttf-ancient-fonts
+echo "*** Install backgrounds icons and fonts ..."
+sudo apt-get install -y gnome-backgrounds moka-icon-theme ttf-ancient-fonts fonts-firacode
 
+echo "*** Install other web browsers..."
+sudo apt-get install -y chromium-browser epiphany
