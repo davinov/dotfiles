@@ -2,8 +2,6 @@
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/bin
 
-alias 49.3='sudo $(fc -ln -1)'
-
 source ~/.zsh/antigen.zsh
 source ~/.zsh/pure.zsh
 
