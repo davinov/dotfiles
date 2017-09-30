@@ -70,13 +70,16 @@ ln -sf .dotfiles/gitexcludes .gitexcludes
 ln -sf .dotfiles/tmux.conf .tmux.conf
 ln -sf .dotfiles/zshrc .zshrc
 
+mkdir -p .config/Code/User
+ln -sf ~/.dotfiles/vscode-settings.json .config/Code/User/settings.json
+ln -sf ~/.dotfiles/vscode-keybindings.json .config/Code/User/keybindings.json
+
 mdir -p .ssh
 ln -sf ../.dotfiles/sshconfig .ssh/config
 
 mkdir -p .zsh
 ln -sf ../.dotfiles/zsh/antigen.zsh .zsh/antigen.zsh
 ln -sf ../.dotfiles/zsh/pure.zsh .zsh/pure.zsh
-
 
 echo "*** Install node.js..."
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
@@ -96,7 +99,7 @@ echo "*** Install virtualbox..."
 sudo apt-get install -y virtualbox
 
 echo "*** Install lastpass-cli..."
-sudo apt-get install -y openssl libcurl3 libxml2 libssl-dev libxml2-dev libcurl4-openssl-dev pinentry-curses xclip
+sudo apt-get install -y openssl libcurl4-openssl-dev libxml2 libssl-dev libxml2-dev pinentry-curses xclip cmake build-essential pkg-config
 mkdir -p ~/apps
 git clone git@github.com:lastpass/lastpass-cli.git ~/apps/lastpass
 cd ~/apps/lastpass
