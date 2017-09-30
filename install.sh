@@ -3,11 +3,12 @@
 cd ~
 
 echo "*** Add repositories..."
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv EA312927
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 MONGO_VERSION="3.4"
 echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:moka/stable
+sudo add-apt-repository -y ppa:ne0sight/chrome-gnome-shell
 
 echo "*** Install basic packages..."
 sudo apt-get install -y curl git openssh-server vim zsh
@@ -107,7 +108,10 @@ echo "*** Configure Gnome..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
 
 echo "*** Install backgrounds icons and fonts ..."
-sudo apt-get install -y gnome-backgrounds moka-icon-theme ttf-ancient-fonts fonts-firacode
+sudo apt-get install -y gnome-backgrounds gnome-themes-standard gtk2-engines-murrine moka-icon-theme ttf-ancient-fonts fonts-firacode
 
 echo "*** Install other web browsers..."
 sudo apt-get install -y chromium-browser epiphany
+
+echo "*** Install extensions..."
+sudo apt-get install chrome-gnome-shell
