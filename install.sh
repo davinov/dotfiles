@@ -37,6 +37,12 @@ sudo pip install ansible
 echo "*** Install MongoDB..."
 sudo apt-get install -y mongodb-org
 
+echo "*** Install Redis..."
+sudo apt-get install -y redis-server
+
+echo "*** Install nginx..."
+sudo apt-get install -y nginx
+
 echo "*** Install KVM..."
 sudo apt-get install -y qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
 
@@ -69,8 +75,8 @@ sudo apt-get install -y tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "*** Install node.js..."
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs yarn
 
 echo "*** Install basic npm packages..."
 sudo npm install -g bower gulp cordova ionic n
