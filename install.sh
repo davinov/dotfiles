@@ -34,6 +34,9 @@ sudo apt-get update
 echo "*** Set default shell to zsh..."
 chsh -s $(which zsh)
 
+echo "*** Install smartcart support..."
+sudo apt-get install pcscd scdaemon gnupg2 pcsc-tools
+
 echo "*** Install imaging programs..."
 sudo apt-get install -y gimp inkscape
 
