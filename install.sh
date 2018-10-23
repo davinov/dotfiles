@@ -144,7 +144,7 @@ echo "*** Install extensions..."
 sudo apt-get install -y chrome-gnome-shell
 
 echo "*** Install utilities..."
-sudo apt-get install -y filezilla gnome-tweak-tool htop
+sudo apt-get install -y filezilla gnome-tweak-tool htop net-tools
 
 echo "*** Configure..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
