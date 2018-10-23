@@ -10,7 +10,6 @@
     ],
     "editor.renderIndentGuides": true,
     "editor.renderControlCharacters": true,
-    "vsicons.projectDetection.disableDetect": true,
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "workbench.iconTheme": "vs-seti",
@@ -21,11 +20,35 @@
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 0,
     "files.associations": {
-        "Vagrantfile": "ruby"
+        "Vagrantfile": "ruby",
+        "*.tidal": "haskell"
     },
     "window.menuBarVisibility": "toggle",
     "extensions.ignoreRecommendations": false,
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "tidalcycles": {
+        "showOutputInConsoleChannel": true,
+        "ghciPath": "/usr/bin/ghci",
+        "bootTidalPath": "/home/david/dev/music/tidal/tidal.hss"
+    },
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    "gitlens.keymap": "chorded",
+    "gitlens.historyExplorer.enabled": true,
+    "workbench.colorTheme": "Arc+",
+    "window.titleBarStyle": "custom",
+    "breadcrumbs.enabled": true
 }

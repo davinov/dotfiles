@@ -1,3 +1,15 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+    {
+        "key": "ctrl+k ctrl+i",
+        "command" : "extension.changeCase.camel"
+    },
+    {
+        "key": "ctrl+k ctrl+o",
+        "command" : "extension.changeCase.kebab"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
+    }
 ]
