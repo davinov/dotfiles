@@ -1,6 +1,7 @@
 # set -x
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/bin
+export CHROME_BIN=/usr/bin/chromium-browser
 
 source ~/.zsh/antigen.zsh
 source ~/.zsh/pure.zsh
