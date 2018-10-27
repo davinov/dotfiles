@@ -105,9 +105,6 @@ echo "*** Install node.js..."
 sudo apt-get remove -y cmdtest # Conflicts with yarn
 sudo apt-get install -y nodejs yarn
 
-echo "*** Install basic npm packages..."
-sudo npm install -g bower gulp cordova ionic n
-
 echo "*** Install ruby packages..."
 sudo apt-get install -y ruby ruby-dev rubygems-integration
 sudo gem install bundler
