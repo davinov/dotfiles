@@ -29,6 +29,10 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
 sudo apt-get update
 
 echo "*** Set default shell to zsh..."
@@ -142,6 +146,13 @@ sudo apt-get install -y chrome-gnome-shell
 
 echo "*** Install utilities..."
 sudo apt-get install -y filezilla gnome-tweak-tool htop net-tools
+
+echo "*** Install visual studio code and extensions..."
+sudo apt-get install code
+code --install-extension ms-python.python
+code --install-extension ms-vscode.atom-keybindings
+code --install-extension ph-hawkins.arc-plus
+code --install-extension editorconfig.editorconfig
 
 echo "*** Configure..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
