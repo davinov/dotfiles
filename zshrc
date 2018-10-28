@@ -4,7 +4,6 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/bin
 export CHROME_BIN=/usr/bin/chromium-browser
 
 source ~/.zsh/antigen.zsh
-source ~/.zsh/pure.zsh
 
 antigen use oh-my-zsh
 
@@ -32,6 +31,10 @@ antigen bundle github
 # antigen bundle postgres
 antigen bundle supervisor
 antigen bundle vagrant
+
+# Theme
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 
 antigen apply
 
