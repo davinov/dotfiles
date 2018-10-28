@@ -50,5 +50,6 @@
     "gitlens.historyExplorer.enabled": true,
     "workbench.colorTheme": "Arc+",
     "window.titleBarStyle": "custom",
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "git.autofetch": true
 }
