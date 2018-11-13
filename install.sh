@@ -19,11 +19,12 @@ NODE_VERSION="node_8.x"
 echo "deb https://deb.nodesource.com/$NODE_VERSION $DISTRO_LTS main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:moka/stable
 
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -138,6 +139,8 @@ code --install-extension ms-python.python
 code --install-extension ms-vscode.atom-keybindings
 code --install-extension ph-hawkins.arc-plus
 code --install-extension editorconfig.editorconfig
+code --install-extension msjsdiag.debugger-for-chrome
+code --install-extension hbenl.vscode-firefox-debug
 
 echo "*** Configure..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
