@@ -12,7 +12,6 @@
     "editor.renderControlCharacters": true,
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
-    "workbench.iconTheme": "vs-seti",
     "editor.dragAndDrop": true,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
@@ -29,11 +28,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
     "workbench.startupEditor": "newUntitledFile",
-    "tidalcycles": {
-        "showOutputInConsoleChannel": true,
-        "ghciPath": "/usr/bin/ghci",
-        "bootTidalPath": "/home/david/dev/music/tidal/tidal.hss"
-    },
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
