@@ -148,6 +148,7 @@ code --install-extension hbenl.vscode-firefox-debug
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension dbaeumer.octref.vetur
 code --install-extension rebornix.project-snippets
+code --install-extension github.vscode-pull-request-github
 
 echo "*** Configure..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
