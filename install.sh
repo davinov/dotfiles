@@ -21,6 +21,9 @@ echo "deb https://deb.nodesource.com/$NODE_VERSION $DISTRO_LTS main" | sudo tee 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
+echo "deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main" | sudo tee /etc/apt/sources.list.d/slack.list
+
+
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:moka/stable
 
@@ -122,6 +125,7 @@ cd ~
 
 echo "*** Install multimedia stuff..."
 sudo apt-get install -y spotify-client vlc
+sudo apt-get install -y slack-desktop
 
 echo "*** Install backgrounds icons and fonts ..."
 sudo apt-get install -y gnome-backgrounds gnome-themes-standard gtk2-engines-murrine moka-icon-theme ttf-ancient-fonts fonts-firacode
