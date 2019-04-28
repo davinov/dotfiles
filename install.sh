@@ -145,6 +145,9 @@ code --install-extension ph-hawkins.arc-plus
 code --install-extension editorconfig.editorconfig
 code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension hbenl.vscode-firefox-debug
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension dbaeumer.octref.vetur
+code --install-extension rebornix.project-snippets
 
 echo "*** Configure..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'
