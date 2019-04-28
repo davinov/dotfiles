@@ -15,7 +15,7 @@ MONGO_VERSION="3.4"
 echo "deb http://repo.mongodb.org/apt/ubuntu $DISTRO_LTS/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
 
 curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
-NODE_VERSION="node_8.x"
+NODE_VERSION="node_10.x"
 echo "deb https://deb.nodesource.com/$NODE_VERSION $DISTRO_LTS main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
