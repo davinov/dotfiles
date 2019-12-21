@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DISTRO="$(lsb_release -s -c)"
-DISTRO_LTS="xenial"
+DISTRO_LTS="bionic"
 
 cd ~
 
@@ -10,9 +10,9 @@ sudo apt-get install -y curl git openssh-server vim zsh
 sudo apt-get install -y software-properties-common ca-certificates
 
 echo "*** Add repositories..."
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
-MONGO_VERSION="3.4"
-echo "deb http://repo.mongodb.org/apt/ubuntu $DISTRO_LTS/mongodb-org/$MONGO_VERSION main" | sudo tee /etc/apt/sources.list.d/mongodb.list
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+MONGO_VERSION="4.2"
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu $DISTRO_LTS/mongodb-org/$MONGO_VERSION multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org.list
 
 curl --silent https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
 NODE_VERSION="node_10.x"
@@ -33,9 +33,9 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $DISTRO_LTS stable"
 
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
 
 sudo apt-get update
 
@@ -149,6 +149,7 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension dbaeumer.octref.vetur
 code --install-extension rebornix.project-snippets
 code --install-extension github.vscode-pull-request-github
+code --install-extension streetsidesoftware.code-spell-checker
 
 echo "*** Configure..."
 gsettings set org.gnome.desktop.wm.preferences focus-new-windows 'strict'

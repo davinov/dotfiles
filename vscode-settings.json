@@ -13,14 +13,15 @@
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
     "editor.dragAndDrop": true,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "editor.minimap.renderCharacters": false,
     "editor.wordWrap": "on",
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": 0,
     "files.associations": {
         "Vagrantfile": "ruby",
-        "*.tidal": "haskell"
+        "*.tidal": "haskell",
+        "Jenkinsfile-test": "groovy"
     },
     "window.menuBarVisibility": "toggle",
     "extensions.ignoreRecommendations": false,
@@ -45,5 +46,16 @@
     "workbench.colorTheme": "Arc+",
     "window.titleBarStyle": "custom",
     "breadcrumbs.enabled": true,
-    "git.autofetch": true
+    "git.autofetch": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "cSpell.userWords": [
+        "ellipsed",
+        "ellipsede"
+    ],
+    "[python]": {
+        
+    },
+    "webhint.enableTelemetry": "disabled",
+    "material-icon-theme.folders.theme": "none",
+    "material-icon-theme.saturation": 0.7,
 }
